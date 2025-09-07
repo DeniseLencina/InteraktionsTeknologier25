@@ -4,8 +4,115 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Pepita the swallow</title>
+    <title>Pepita the swallow</title>
+    <style>
+        body {
+            font-family: 'Futura', Helvetica;
+            background: #F4F0DB;
+            margin: 0;
+            padding: 20px;
+            min-height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .container {
+            background: #FFFAF1;
+            border-radius: 15px;
+            padding: 40px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.2);
+            text-align: center;
+            max-width: 500px;
+            width: 100%;
+        }
+    
+        h1 {
+            color: #d9a561;
+            margin-bottom: 20px;
+            font-size: 36px;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            position: absolute;
+            top: 40px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 100%;
+        }
+
+        h2 {
+            color: #DEC19B;
+            margin-bottom: 30px;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .bird-image {
+            width: 500px;
+            height: 250px;
+            border-radius: 5%;
+            margin: 20px auto;
+        }
+
+        .energy-display {
+            border-radius: 10px;
+            padding: 10px;
+            margin: 10px 0;
+            font-size: 20px;
+            color: #424e5b;
+        }
+
+        .controls {
+            margin-top: 20px;
+        }
+
+        button {
+            padding: 12px 24px;
+            border: none;
+            border-radius: 25px;
+            font-size: 16px;
+            font-weight: bold;
+            cursor: pointer;
+            margin: 10px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+            transition: all 0.3s ease;
+        }
+
+        button:hover {
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+        }
+
+        .eat-btn {
+            color: #424e5b;
+        }
+
+        .fly-btn {
+            color: #424e5b;
+        }
+    </style>
 </head>
 <body>
-    
+    <h1>The Ornithologist Notebook</h1>
+
+    <div class="container">
+        <h2>Pepita the Swallow</h2>
+        
+        <img class="bird-image" 
+             src="swallowpik.jpeg" 
+             alt="Pepita the Swallow">
+        
+        <div class="energy-display">
+            Energy: <span id="energy">0</span> Joules
+        </div>
+        
+        <div class="controls">
+            <button class="eat-btn" onclick="eat()"> Eat 10g</button>
+            <button class="fly-btn" onclick="fly()"> Fly 1km</button>
+        </div>
+        
+    </div>
+
+    <script src="pepita.js"></script>
 </body>
 </html>
